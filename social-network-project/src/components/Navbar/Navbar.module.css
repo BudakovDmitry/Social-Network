@@ -2,14 +2,14 @@
   grid-area: nav;
   background-color: #2f4f4f;
   color: #fff;
+  padding: 20px;
 }
 
-.text {
-  margin-left: 70px;
-  margin-top: 50px;
-}
-
-.text a {
+.item a {
   text-decoration: none;
   color: #fff;
+}
+
+.item a.active {
+  color: gold;
 }
