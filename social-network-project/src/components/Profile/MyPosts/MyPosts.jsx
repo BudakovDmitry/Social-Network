@@ -21,9 +21,9 @@ const MyPosts = (props) => {
       <a href="#" className={classes.botr}>
         Add new post
       </a>
-      <Post message="Hi, how are you?" like="15" />
-      <Post message="It`s my first post" like="20" />
-      <Post message="Hello" like="2" />
+      <Post message={postData[0].message} like={postData[0].likesCount} />
+      <Post message={postData[1].message} like={postData[1].likesCount} />
+      <Post message={postData[2].message} like={postData[2].likesCount} />
     </div>
   );
 };
