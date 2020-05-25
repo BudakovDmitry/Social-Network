@@ -3,11 +3,16 @@ import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
-  let postData = [
+  let posts = [
     { id: 1, message: "Hi, how are you?", likesCount: 15 },
     { id: 2, message: "It`s my first post", likesCount: 20 },
     { id: 3, message: "Hello", likesCount: 2 },
+    { id: 4, message: "Goodbay, my friends", likesCount: 7 },
   ];
+
+  let postsElements = posts.map((post) => (
+    <Post message={post.message} like={post.likesCount} />
+  ));
 
   return (
     <div className={classes.postsBlock}>
@@ -18,12 +23,10 @@ const MyPosts = (props) => {
           className={classes.textarea}
         ></textarea>
       </div>
-      <a href="#" className={classes.botr}>
+      <a href="#s" className={classes.botr}>
         Add new post
       </a>
-      <Post message={postData[0].message} like={postData[0].likesCount} />
-      <Post message={postData[1].message} like={postData[1].likesCount} />
-      <Post message={postData[2].message} like={postData[2].likesCount} />
+      {postsElements}
     </div>
   );
 };
